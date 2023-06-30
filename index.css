@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+main {
+    display: flex;
+}
+
+main aside {
+    position: fixed;
+    padding: 32px 16px;
+    background-color: #e4e4e4;
+    height: 100vh;
+    text-align: center;
+}
+
+main aside nav picture img {
+    width: 250px;
+    border-radius: 50%;
+}
+
+main aside nav ul {
+    margin: 64px 0 0 0;
+    padding: 4px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    font-weight: 700;
+}
+
+
+
+main aside nav ul li {
+    list-style: none;
+}
+
+main aside nav ul li a {
+    text-decoration: none;
+    color: #252525;
+}
+
+main aside nav p {
+    position: absolute;
+    left: 88px;
+    bottom: 32px;
+    font-size: 25px;
+    color: slategray;    
+}
+
+
+
+#list {
+    position: absolute;
+    right: 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+}
+
+h1 {
+    color: #333;
+}
+
+#taskInput {
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+#addTaskButton {
+    padding: 10px;
+    background-color: #007BFF;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.192);
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#addTaskButton:hover {
+    opacity: .75;
+}
+
+#taskList {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#taskList li {
+    list-style: none;
+    width: auto;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #252525;
+    padding: 5px 20px;
+    border-radius: 10px;
+    gap: 60px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+#taskList li:hover {
+    color: #007BFF; 
+    transform: scale(1.1);
+}
+
+.checkbox {
+    width: 15px;
+    height: 15px;
+}
+    
+.checkbox:hover {
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.canecasvg:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width:575px) {
+    main aside {
+        display: none;
+    }
+
+    #list {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #taskInput {
+        width: 250px;
+    }
+}
